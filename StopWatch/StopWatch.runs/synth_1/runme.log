@@ -1,0 +1,372 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 596 
+WARNING: [Synth 8-2611] redeclaration of ansi port testprobe is not allowed [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/top.v:33]
+WARNING: [Synth 8-976] testprobe has already been declared [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/top.v:33]
+WARNING: [Synth 8-2654] second declaration of testprobe ignored [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/top.v:33]
+INFO: [Synth 8-994] testprobe is declared here [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/top.v:28]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 379.465 ; gain = 107.352
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-638] synthesizing module 'clk_5MHZ' [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.runs/synth_1/.Xil/Vivado-1672-a-PC/realtime/clk_5MHZ_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_5MHZ' (1#1) [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.runs/synth_1/.Xil/Vivado-1672-a-PC/realtime/clk_5MHZ_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'counter' [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/imports/new/counter.v:23]
+INFO: [Synth 8-256] done synthesizing module 'counter' (2#1) [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/imports/new/counter.v:23]
+INFO: [Synth 8-638] synthesizing module 'seven_display' [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:23]
+	Parameter C0 bound to: 7'b0000001 
+	Parameter C1 bound to: 7'b1001111 
+	Parameter C2 bound to: 7'b0010010 
+	Parameter C3 bound to: 7'b0000110 
+	Parameter C4 bound to: 7'b1001100 
+	Parameter C5 bound to: 7'b0100100 
+	Parameter C6 bound to: 7'b1100000 
+	Parameter C7 bound to: 7'b0001111 
+	Parameter C8 bound to: 7'b0000000 
+	Parameter C9 bound to: 7'b0001100 
+INFO: [Synth 8-256] done synthesizing module 'seven_display' (3#1) [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:23]
+INFO: [Synth 8-256] done synthesizing module 'top' (4#1) [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 407.242 ; gain = 135.129
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 407.242 ; gain = 135.129
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.runs/synth_1/.Xil/Vivado-1672-a-PC/dcp1/clk_5MHZ_in_context.xdc] for cell 'U1'
+Finished Parsing XDC File [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.runs/synth_1/.Xil/Vivado-1672-a-PC/dcp1/clk_5MHZ_in_context.xdc] for cell 'U1'
+Parsing XDC File [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'swt[0]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'swt[1]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'swt[2]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'swt[3]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'swt[4]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'swt[5]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'swt[6]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'swt[7]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'swt[8]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'swt[9]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc:40]
+Finished Parsing XDC File [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/constrs_1/imports/tutorial/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 757.309 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 757.309 ; gain = 485.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 757.309 ; gain = 485.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.runs/synth_1/.Xil/Vivado-1672-a-PC/dcp1/clk_5MHZ_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK100MHZ. (constraint file  C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.runs/synth_1/.Xil/Vivado-1672-a-PC/dcp1/clk_5MHZ_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for U1. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 757.309 ; gain = 485.195
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element one_sec_reg was removed.  [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/imports/new/counter.v:66]
+INFO: [Synth 8-4471] merging register 'AN2_reg' into 'AN1_reg' [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:57]
+INFO: [Synth 8-4471] merging register 'AN3_reg' into 'AN1_reg' [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:58]
+INFO: [Synth 8-4471] merging register 'AN4_reg' into 'AN1_reg' [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:58]
+INFO: [Synth 8-4471] merging register 'AN5_reg' into 'AN1_reg' [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:58]
+INFO: [Synth 8-4471] merging register 'AN6_reg' into 'AN1_reg' [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:59]
+INFO: [Synth 8-4471] merging register 'AN7_reg' into 'AN1_reg' [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:59]
+WARNING: [Synth 8-6014] Unused sequential element AN2_reg was removed.  [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:57]
+WARNING: [Synth 8-6014] Unused sequential element AN3_reg was removed.  [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:58]
+WARNING: [Synth 8-6014] Unused sequential element AN4_reg was removed.  [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:58]
+WARNING: [Synth 8-6014] Unused sequential element AN5_reg was removed.  [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:58]
+WARNING: [Synth 8-6014] Unused sequential element AN6_reg was removed.  [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:59]
+WARNING: [Synth 8-6014] Unused sequential element AN7_reg was removed.  [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/new/seven_display.v:59]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 757.309 ; gain = 485.195
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module seven_display 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 9     
++---Muxes : 
+	  11 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element U2/one_sec_reg was removed.  [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/imports/new/counter.v:66]
+INFO: [Synth 8-3886] merging instance 'U2/counter_1_reg[25]' (FDC) to 'U2/counter_1_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U2/counter_1_reg[26]' (FDC) to 'U2/counter_1_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U2/counter_1_reg[27]' (FDC) to 'U2/counter_1_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U2/counter_1_reg[24]' (FDC) to 'U2/counter_1_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U2/counter_1_reg[22]' (FDC) to 'U2/counter_1_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U2/counter_1_reg[23]' (FDC) to 'U2/counter_1_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U2/counter_1_reg[31]' (FDC) to 'U2/counter_1_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U2/counter_1_reg[30]' (FDC) to 'U2/counter_1_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U2/counter_1_reg[28]' (FDC) to 'U2/counter_1_reg[29]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U2/counter_1_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U2/counter_2_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U3/AN1_reg )
+WARNING: [Synth 8-3332] Sequential element (U2/counter_1_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U2/counter_2_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (U3/AN1_reg) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 757.309 ; gain = 485.195
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'U1/clk_out1' to pin 'U1/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 762.586 ; gain = 490.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 782.188 ; gain = 510.074
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 783.465 ; gain = 511.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 783.465 ; gain = 511.352
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 783.465 ; gain = 511.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 783.465 ; gain = 511.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 783.465 ; gain = 511.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 783.465 ; gain = 511.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 783.465 ; gain = 511.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_5MHZ      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |clk_5MHZ |     1|
+|2     |CARRY4   |     6|
+|3     |LUT1     |     1|
+|4     |LUT2     |     2|
+|5     |LUT3     |     8|
+|6     |LUT4     |     7|
+|7     |LUT5     |     1|
+|8     |LUT6     |    24|
+|9     |FDCE     |    35|
+|10    |FDPE     |     1|
+|11    |IBUF     |     1|
+|12    |OBUF     |    16|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |   103|
+|2     |  U2     |counter       |    74|
+|3     |  U3     |seven_display |    11|
++------+---------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 783.465 ; gain = 511.352
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 783.465 ; gain = 161.285
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 783.465 ; gain = 511.352
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+41 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 784.332 ; gain = 523.875
+INFO: [Common 17-1381] The checkpoint 'C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 784.332 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 25 12:43:21 2019...
