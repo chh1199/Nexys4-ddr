@@ -6,6 +6,7 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/a/Desktop/Vivado_Project_c
 INFO: [VRFC 10-311] analyzing module clk_rst_tb
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/imports/new/counter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module counter
+WARNING: [VRFC 10-1315] redeclaration of ansi port zero_dot_one is not allowed [C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sources_1/imports/new/counter.v:37]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sim_1/new/seven_display_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module seven_display_tb
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/a/Desktop/Vivado_Project_chh/Project/2019-01-23/StopWatch/StopWatch.srcs/sim_1/new/seven_display_tb_top.v" into library xil_defaultlib

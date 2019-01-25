@@ -29,13 +29,13 @@ module top(
  );
  
     wire clk_5M; 
-    wire [3:0] one_sec;
+    wire [3:0] one_sec, zero_dot_one, seven_select;
     wire testprobe;
 
     clk_5MHZ U1(clk_5M,CPU_RESETN,CLK100MHZ);
-    counter U2(clk_5M, CPU_RESETN,one_sec );
-    seven_display U3(clk_5M, one_sec, CPU_RESETN, CA,CB,CC,CD,CE,CF,CG, AN0,AN1,AN2,AN3,AN4,AN5,AN6,AN7);
+    counter U2(clk_5M, CPU_RESETN,one_sec, zero_dot_one, seven_select );
+    seven_display U3(clk_5M, one_sec,/*zero_dot_one*/seven_select , CPU_RESETN, CA,CB,CC,CD,CE,CF,CG, AN0,AN1,AN2,AN3,AN4,AN5,AN6,AN7);
  
-    assign testprobe = one_sec;
+    //assign testprobe = one_sec;
     
 endmodule

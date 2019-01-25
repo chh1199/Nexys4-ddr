@@ -23,6 +23,8 @@
 module seven_display_tb(
 input clk_5M,
 input [3:0] s1,
+input [3:0] seven_select,
+//input [3:0] s01,
 input resetn,
 output reg CA,CB,CC,CD,CE,CF,CG,
 output reg AN0,
@@ -53,72 +55,72 @@ output reg AN7
             AN0 <= 1; AN1 <= 1; AN2 <= 1;
             AN3 <= 1; AN4 <= 1; AN5 <= 1;
             AN6 <= 1; AN7 <= 1;
+            
         end
         
-        always@(posedge clk_5M, negedge resetn)
-        begin
-         if(!resetn)
-           begin
-               CA <= 0; CB <= 0; CC <= 0;
-               CD <= 0; CE <= 0; CF <= 0;
-               CG <= 0;
-               AN0 <= 1; AN1 <= 1; AN2 <= 1;
-               AN3 <= 1; AN4 <= 1; AN5 <= 1;
-               AN6 <= 1; AN7 <= 1;
-           end
-          else
+always@(posedge clk_5M, negedge resetn)
             begin
-                case(s1)
-                
+             if(!resetn)
+               begin
+                   CA <= 0; CB <= 0; CC <= 0;
+                   CD <= 0; CE <= 0; CF <= 0;
+                   CG <= 0;
+                   AN0 <= 1; AN1 <= 1; AN2 <= 1;
+                   AN3 <= 1; AN4 <= 1; AN5 <= 1;
+                   AN6 <= 1; AN7 <= 1;
+               end
+              else
+                begin
+                case(s1)                  
                 0 : 
                     begin
                         CA <= 0; CB <= 0; CC <= 0;  CD <= 0; CE <= 0;  CF <= 0; CG <= 1;
-                        AN0 <= 0; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                        //AN0 <= 1; AN1 <= 0; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
                     end
                 1 :        
                     begin
                         CA <= 1; CB <= 0; CC <= 0;  CD <= 1; CE <= 1;  CF <= 1; CG <= 1;
-                        AN0 <= 0; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                        //AN0 <= 1; AN1 <= 0; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
                     end
                 2 :
                     begin
                         CA <= 0; CB <= 0; CC <= 1;  CD <= 0; CE <= 0;  CF <= 1; CG <= 0;
-                        AN0 <= 0; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                        //AN0 <= 1; AN1 <= 0; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
                     end
                 3 :
                     begin
                         CA <= 0; CB <= 0; CC <= 0;  CD <= 0; CE <= 1;  CF <= 1; CG <= 0;
-                        AN0 <= 0; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                       //AN0 <= 1; AN1 <= 0; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
                     end
                 4 :
                     begin
-                        CA <= 0; CB <= 0; CC <= 1;  CD <= 0; CE <= 0;  CF <= 1; CG <= 0;
-                        AN0 <= 0; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                        CA <= 1; CB <= 0; CC <= 0;  CD <= 1; CE <= 1;  CF <= 0; CG <= 0;
+                        //AN0 <= 1; AN1 <= 0; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
                     end
                 5 :
                     begin
                         CA <= 0; CB <= 1; CC <= 0;  CD <= 0; CE <= 1;  CF <= 0; CG <= 0;
-                        AN0 <= 0; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                        //AN0 <= 1; AN1 <= 0; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
                     end
                 6 :
                     begin
                         CA <= 1; CB <= 1; CC <= 0;  CD <= 0; CE <= 0;  CF <= 0; CG <= 0;
-                        AN0 <= 0; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                        //AN0 <= 1; AN1 <= 0; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
                     end
                 7 :
                     begin
                         CA <= 0; CB <= 0; CC <= 0;  CD <= 1; CE <= 1;  CF <= 1; CG <= 1;
-                        AN0 <= 0; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;                
+                        //AN0 <= 1; AN1 <= 0; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;                
                     end     
                 8 :
                     begin
                         CA <= 0; CB <= 0; CC <= 0;  CD <= 0; CE <= 0;  CF <= 0; CG <= 0;
-                        AN0 <= 0; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                        //AN0 <= 1; AN1 <= 0; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
                     end     
                 9 :
                     begin
                         CA <= 0; CB <= 0; CC <= 0;  CD <= 1; CE <= 1;  CF <= 0; CG <= 0;
-                        AN0 <= 0; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;               
+                        //AN0 <= 1; AN1 <= 0; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;               
                     end     
                  default : 
                     begin
@@ -128,6 +130,48 @@ output reg AN7
             
                     end
                 endcase
+                
+                case(seven_select)                  
+                0 : 
+                    begin
+                        AN0 <= 0; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                    end
+                1 :        
+                    begin
+                        AN0 <= 1; AN1 <= 0; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                    end
+                2 :
+                    begin
+                        AN0 <= 1; AN1 <= 1; AN2 <= 0; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                    end
+                3 :
+                    begin
+                        AN0 <= 1; AN1 <= 1; AN2 <= 1; AN3 <= 0; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                    end
+                4 :
+                    begin
+                        AN0 <= 1; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 0; AN5 <= 1; AN6 <= 1; AN7 <= 1;
+                    end
+                5 :
+                    begin
+                        AN0 <= 1; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 0; AN6 <= 1; AN7 <= 1;
+                    end
+                6 :
+                    begin
+                        AN0 <= 1; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 0; AN7 <= 1;
+                    end
+                7 :
+                    begin
+                        AN0 <= 1; AN1 <= 1; AN2 <= 1; AN3 <= 1; AN4 <= 1; AN5 <= 1; AN6 <= 1; AN7 <= 0;                
+                    end     
+                 default : 
+                    begin
+                        AN0 <= 1; AN1 <= 1; AN2 <= 1;
+                        AN3 <= 1; AN4 <= 1; AN5 <= 1;
+                        AN6 <= 1; AN7 <= 1;
+                    end
+                endcase
+                            
             end   
         end
 endmodule

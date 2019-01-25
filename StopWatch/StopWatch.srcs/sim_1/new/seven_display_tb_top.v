@@ -26,11 +26,11 @@ module seven_display_tb_top(
     );
     
     wire clk_5M, reset, clk_100M;
-    wire  [3:0] one_sec;
+    wire [3:0] one_sec, zero_dot_one, seven_select;
    
     clk_rst_tb U1(clk_100M,reset);
     clk_5MHZ U2(clk_5M,reset,clk_100M);
-    counter U3(clk_5M,reset,one_sec);
-    seven_display_tb U4(clk_5M, one_sec , reset,CA,CB,CC,CD,CE,CF,CG, AN0,AN1,AN2,AN3,AN4,AN5,AN6,AN7);
+    counter U3(clk_5M,reset,one_sec, /*zero_dot_one*/zero_dot_one, seven_select);
+    seven_display_tb U4(clk_5M, one_sec , /*zero_dot_one*/seven_select, reset,CA,CB,CC,CD,CE,CF,CG, AN0,AN1,AN2,AN3,AN4,AN5,AN6,AN7);
     
 endmodule
